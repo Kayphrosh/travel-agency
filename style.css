@@ -252,6 +252,7 @@ a, a:active, a:hover, a:focus {
     .container-2 {
         width: 100%;
         padding: 20px 10px;
+        min-height: 80vh;
     }
     .slide {
         width: 100vw;
