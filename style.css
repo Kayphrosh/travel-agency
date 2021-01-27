@@ -251,7 +251,7 @@ a, a:active, a:hover, a:focus {
     }
     .container-2 {
         width: 100%;
-        padding: 20px 10px;
+        padding: 3 0px 10px;
         min-height: 80vh;
     }
     .slide {
@@ -327,6 +327,10 @@ a, a:active, a:hover, a:focus {
     padding-left: 35px;
     border: 1.8px solid #181818;
     border-radius: 5px;
+    outline: none;
+}
+#search input:focus {
+    border: 2px solid #003030;
 }
 #search .iconify {
     position: absolute;
@@ -404,6 +408,7 @@ a, a:active, a:hover, a:focus {
     padding: 5px;
     padding-bottom: 0;
     position: relative;
+    overflow: hidden;
 }
 .places-nav {
     display: flex;
@@ -418,14 +423,16 @@ a, a:active, a:hover, a:focus {
 .places-nav a.active-li {
     border-bottom: 2.5px solid #008c8c;
 }
-.dubai-x {
+#dubai-x {
     display: flex;
+    justify-content: space-between;
     min-width: 300px;
-    width: 100%;
+    width: 1200px;
     height: 280px;
     margin: 15px 10px;
     margin-bottom: 0;
-    gap: 10px;
+    transform: translateX(0);
+    transition: 0.4s ease-in;
 }
 .dubai-1 {
     display: flex;
@@ -460,12 +467,18 @@ a, a:active, a:hover, a:focus {
     justify-content: space-between;
     width: 80px;
     position: absolute;
-    bottom: 0px;
+    bottom: -5px;
     left: 20px;
 }
-.nav-btn #left-btn {
+.nav-btn button {
     font-size: 40px;
     color: #a7a7a7;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    color: #2e2e2e;
+    cursor: pointer;
 }
 .nav-btn #right-btn {
     font-size: 40px;

@@ -101,3 +101,32 @@ function update() {
 
     progress.style.width = (actives.length - 1) / (circles.length - 1) * 100 + '%'
 }
+
+
+const exploreT = document.getElementById('dubai-x');
+const exploreLeft = document.getElementById('explore-left');
+const exploreRight = document.getElementById('explore-right');
+const exploreDiv = document.querySelectorAll('.dubai-1');
+
+console.log(exploreRight);;
+
+let idx = 0
+function changeExploreDiv() {
+    if(idx > exploreDiv.length - 1) {
+        idx = 0
+    } else if (idx < 0) {
+        idx = exploreDiv - 1
+    }
+    exploreT.style.transform = `translateX(${-idx * 230}px)`
+}
+exploreLeft.addEventListener('click', () => {
+    idx--
+    if(idx = 0) {
+        exploreLeft.disabled = true;
+    }
+    changeExploreDiv()
+})
+exploreRight.addEventListener('click', () => {
+    idx++
+    changeExploreDiv()
+})
