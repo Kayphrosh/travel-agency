@@ -73,7 +73,7 @@ a, a:active, a:hover, a:focus {
 }
 .slider-container {
     box-shadow: 0 0px 5px rgba(0, 0, 0, 0.56), 0 0px 5px rgba(0, 0, 0, 0.53);
-    min-height: 100vh;
+    height: 100vh;
     width: 66vw;
     border-radius: 0;
     border-top-right-radius: 60px;
@@ -252,8 +252,8 @@ a, a:active, a:hover, a:focus {
     }
     .slider-container {
         width: 100%;
-        min-height: 75vh;
-        height: 100%;
+        min-height: 100%;
+        height: 75vh;
         border-top-right-radius: 0px;
         border-bottom-right-radius: 50px;
         border-bottom-left-radius: 50px;
@@ -265,7 +265,7 @@ a, a:active, a:hover, a:focus {
     }
     .slide {
         width: 100vw;
-        height: 75vh;
+        /* min-height: 100%; */
     }
     .slides-content {
         padding: 0;
@@ -288,6 +288,16 @@ a, a:active, a:hover, a:focus {
         left: 52%;
         transform: translateX(-45%);
         bottom: 1%;
+    }
+}
+@media (max-height: 450px) {
+    .slider-container {
+        min-height: 150vh;
+    }
+}
+@media (max-height: 250px) {
+    .slider-container {
+        min-height: 500px;
     }
 }
 .top-bar {
@@ -320,6 +330,9 @@ a, a:active, a:hover, a:focus {
 .hamburger {
     display: none;
 }
+#idk {
+    display: none;
+}
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -331,14 +344,20 @@ a, a:active, a:hover, a:focus {
     font-weight: 500;
     font-size: 16px;
 }
-
+.user-img {
+    align-self: center;
+    align-items: center;
+    padding-top: 3px;
+}
 .user-img img {
-    object-position: center;
+    object-position: center center;
     object-fit: cover;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 4px solid #4b4b4b;
+    border: 4px solid #003030;
+    align-items: center;
+    align-self: center;
 }
 #search {
     width: 100%;
@@ -424,7 +443,7 @@ a, a:active, a:hover, a:focus {
     margin: 20px 0;
 }
 .explore h2 {
-    font-size: 20px;
+    font-size: 24px;
 }
 .places {
     height: 360px;
@@ -529,6 +548,10 @@ a, a:active, a:hover, a:focus {
         width: 310px;
         height: 320px;
     }
+    #idk {
+        display: flex;
+        align-items: center;
+    }
 }
 .offer {
     display: flex;
@@ -540,7 +563,7 @@ a, a:active, a:hover, a:focus {
     margin-top: 10px;
 }
 .offer h2 {
-    font-size: 20px;
+    font-size: 24px;
     align-self: flex-start;
 }
 .offers {
@@ -557,7 +580,7 @@ a, a:active, a:hover, a:focus {
     text-align: center;
 }
 #services .iconify {
-    font-size: 20px;
+    font-size: 30px;
     color: #003030;
 }
 #services p {
@@ -588,11 +611,10 @@ a, a:active, a:hover, a:focus {
 }
 .about h1 {
     font-size: 90px;
-    color: #d3d3d3;
+    color: #bfbfbf6d;
     position: absolute;
     top: 0;
-    left: 40%;
-    z-index: -11;
+    z-index: -111;
 }
 .about-ifitfly {
     width: 70vw;
@@ -600,11 +622,12 @@ a, a:active, a:hover, a:focus {
     margin: auto;
 }
 .about-ifitfly h2 {
-    text-align: center;
+    text-align: left;
+    font-size: 24px;
 }
 .about-ifitfly p {
     padding: 0;
-    text-align: center;
+    text-align: left;
     font-size: 14px;
 }
 /* .ifitfly-policy h2 {
@@ -614,9 +637,9 @@ a, a:active, a:hover, a:focus {
     font-size: 18px;
 }
 .why-ifitfly, .ifitfly-policy  p {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
-    padding: 20px 10px;
+    padding: 20px 20px;
     border-radius: 5px;
 }
 .about-div {
@@ -629,6 +652,7 @@ a, a:active, a:hover, a:focus {
     margin-top: 20px;
     border: 1.8px solid #181818;
     position: relative;
+    padding: 40px 20px;
 }
 
 @media (max-width: 768px) {

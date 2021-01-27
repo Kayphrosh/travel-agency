@@ -145,7 +145,7 @@ window.addEventListener('scroll', fixBar)
 console.log(topBarLogo);
 
 function fixBar() {
-    if(window.scrollY > topBar.offsetHeight + 600) {
+    if(window.scrollY > topBar.offsetHeight + 800) {
         topBar.classList.add('current')
         topBarLogo.style.display = 'block'
 
