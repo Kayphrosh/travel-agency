@@ -53,15 +53,20 @@ a, a:active, a:hover, a:focus {
     z-index: 111;
     margin: 0;
 }
+.logo-main {
+    display: flex;
+    margin-top: -15px;
+}
 .logo h2 {
     font-family: 'PT Sans', sans-serif;
     color: #ffffff;
     position: relative;
+    margin-top: 25px;
 }
 .logo-id {
     font-family: 'Redressed', cursive;  
     color: #003030;
-    font-size: 2.7rem;
+    font-size: 3.7rem;
 }
 .logo-id-smail{
     font-size: 26px;
@@ -291,8 +296,26 @@ a, a:active, a:hover, a:focus {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    min-height: 30px;
     padding: 0px 10px;
     margin-bottom: 10px;
+    overflow: hidden;
+}
+.top-bar .logo{
+    display: none;
+    left: 60px;
+    color: #000;
+}
+.top-bar .logo .logo-main {
+    top: -35px;
+}
+.top-bar.current {
+    background-color: #888888;
+    position: fixed;
+    top: 0;
+    z-index: 111;
+    margin-bottom: 0;
+    transition: 0.2s ease;
 }
 .hamburger {
     display: none;
@@ -377,14 +400,13 @@ a, a:active, a:hover, a:focus {
         display: flex;
         width: 35px;
         height: 2.5px;
-        background: #000000;
+        background: #003030;
         margin: 8px;
     }
     .line2 {
         width: 25px;
     }
     .hamburger {
-        display: block;
         display: block;
         cursor: pointer;
         z-index: 100;

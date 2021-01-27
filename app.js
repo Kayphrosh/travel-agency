@@ -138,4 +138,19 @@ exploreRight.addEventListener('click', () => {
 })
 
 
+const topBar = document.querySelector('.top-bar')
+const topBarLogo = document.querySelector('.top-bar .logo')
+window.addEventListener('scroll', fixBar) 
 
+console.log(topBarLogo);
+
+function fixBar() {
+    if(window.scrollY > topBar.offsetHeight + 600) {
+        topBar.classList.add('current')
+        topBarLogo.style.display = 'block'
+
+    } else {
+        topBar.classList.remove('current')
+        topBarLogo.style.display = 'none'
+    }
+}
