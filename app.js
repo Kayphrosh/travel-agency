@@ -109,21 +109,20 @@ const exploreRight = document.getElementById('explore-right');
 const exploreDiv = document.querySelectorAll('.dubai-1');
 
 let idx = 0
+var x = window.matchMedia("(max-width: 680px)");
 function changeExploreDiv() {
     if(idx > exploreDiv.length - 1) {
         idx = 0
     } else if (idx < 0) {
         idx = exploreDiv - 1
     }
-    exploreT.style.transform = `translateX(${-idx * 280}px)`
-}
-function changeExploreDiv(x) {
-    if(idx > exploreDiv.length - 1) {
-        idx = 0
-    } else if (idx < 0) {
-        idx = exploreDiv - 1
+    if(x.matches){
+        exploreT.style.transform = `translateX(${-idx * 320}px)`
     }
-    exploreT.style.transform = `translateX(${-idx * 320}px)`
+    else {
+        exploreT.style.transform = `translateX(${-idx * 260}px)`
+    }
+    
 }
 
 exploreLeft.addEventListener('click', () => {
@@ -137,6 +136,6 @@ exploreRight.addEventListener('click', () => {
     idx++
     changeExploreDiv()
 })
-var x = window.matchMedia("(max-width: 680px)");
+
 
 
