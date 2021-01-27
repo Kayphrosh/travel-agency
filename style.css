@@ -423,25 +423,25 @@ a, a:active, a:hover, a:focus {
 .places-nav a.active-li {
     border-bottom: 2.5px solid #008c8c;
 }
-#dubai-x {
+.dubai-x {
     display: flex;
     justify-content: space-between;
-    min-width: 300px;
-    width: 1200px;
+    min-width: 350px;
+    width: 1300px;
     height: 280px;
     margin: 15px 10px;
     margin-bottom: 0;
     transform: translateX(0);
-    transition: 0.4s ease-in;
+    transition: 0.2s ease;
 }
 .dubai-1 {
     display: flex;
     position: relative;
     height: 270px;
-    min-width: 230px;
+    min-width: 250px;
 }
 .dubai-1 img{
-    width: 230px;
+    width: 250px;
     height: 270px;
     object-fit: cover;
     object-position: center center;
@@ -465,9 +465,9 @@ a, a:active, a:hover, a:focus {
 .nav-btn {
     display: flex;
     justify-content: space-between;
-    width: 80px;
+    width: 100px;
     position: absolute;
-    bottom: -5px;
+    bottom: -10px;
     left: 20px;
 }
 .nav-btn button {
@@ -476,13 +476,33 @@ a, a:active, a:hover, a:focus {
     background-color: transparent;
     border: none;
     outline: none;
-    font-size: 30px;
+    font-size: 36px;
     color: #2e2e2e;
     cursor: pointer;
 }
 .nav-btn #right-btn {
-    font-size: 40px;
+    font-size: 44px;
     color: #003030;
+}
+@media (max-width: 600px) {
+    .places {
+        height: 410px;
+    }
+
+    .dubai-x {
+        min-width: 320px;
+        width: 1600px;
+        height: 320px;
+        margin-top: 12px;
+    }
+    .dubai-1 {
+        width: 310px;
+        height: 320px;
+    }
+    .dubai-1 img {
+        width: 310px;
+        height: 320px;
+    }
 }
 .offer {
     display: flex;

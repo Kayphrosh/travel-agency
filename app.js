@@ -103,12 +103,10 @@ function update() {
 }
 
 
-const exploreT = document.getElementById('dubai-x');
+const exploreT = document.querySelector('.dubai-x');
 const exploreLeft = document.getElementById('explore-left');
 const exploreRight = document.getElementById('explore-right');
 const exploreDiv = document.querySelectorAll('.dubai-1');
-
-console.log(exploreRight);;
 
 let idx = 0
 function changeExploreDiv() {
@@ -117,8 +115,17 @@ function changeExploreDiv() {
     } else if (idx < 0) {
         idx = exploreDiv - 1
     }
-    exploreT.style.transform = `translateX(${-idx * 230}px)`
+    exploreT.style.transform = `translateX(${-idx * 280}px)`
 }
+function changeExploreDiv(x) {
+    if(idx > exploreDiv.length - 1) {
+        idx = 0
+    } else if (idx < 0) {
+        idx = exploreDiv - 1
+    }
+    exploreT.style.transform = `translateX(${-idx * 310}px)`
+}
+
 exploreLeft.addEventListener('click', () => {
     idx--
     if(idx = 0) {
@@ -130,3 +137,6 @@ exploreRight.addEventListener('click', () => {
     idx++
     changeExploreDiv()
 })
+var x = window.matchMedia("(max-width: 680px)");
+
+
