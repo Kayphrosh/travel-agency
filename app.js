@@ -123,7 +123,7 @@ function changeExploreDiv(x) {
     } else if (idx < 0) {
         idx = exploreDiv - 1
     }
-    exploreT.style.transform = `translateX(${-idx * 310}px)`
+    exploreT.style.transform = `translateX(${-idx * 320}px)`
 }
 
 exploreLeft.addEventListener('click', () => {
