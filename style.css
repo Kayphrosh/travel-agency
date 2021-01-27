@@ -58,11 +58,13 @@ a, a:active, a:hover, a:focus {
     color: #ffffff;
     position: relative;
 }
-.logo h2 span {
+.logo-id {
     font-family: 'Redressed', cursive;  
     color: #003030;
     font-size: 2.7rem;
-    align-items: center;
+}
+.logo-id-smail{
+    font-size: 26px;
 }
 .slider-container {
     box-shadow: 0 0px 5px rgba(0, 0, 0, 0.56), 0 0px 5px rgba(0, 0, 0, 0.53);
@@ -562,9 +564,13 @@ a, a:active, a:hover, a:focus {
     font-size: 20px;
     margin-bottom: 10px;
 }
-.about .iconify {
-    font-size: 50px;
-    color: #aeaeae;
+.about h1 {
+    font-size: 90px;
+    color: #d3d3d3;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    z-index: -11;
 }
 .about-ifitfly {
     width: 70vw;
@@ -583,7 +589,7 @@ a, a:active, a:hover, a:focus {
     text-align: right;
 } */
 .about-div  h2 {
-    font-size: 16px;
+    font-size: 18px;
 }
 .why-ifitfly, .ifitfly-policy  p {
     font-size: 14px;
@@ -600,6 +606,7 @@ a, a:active, a:hover, a:focus {
     max-width: 100%;
     margin-top: 20px;
     border: 1.8px solid #181818;
+    position: relative;
 }
 
 @media (max-width: 768px) {
