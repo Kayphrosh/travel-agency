@@ -206,10 +206,6 @@ a, a:active, a:hover, a:focus {
 }
 .arrow {
     z-index: 100;
-    /* position: absolute;
-    bottom: 12%;
-    left: 15%;
-    transform: translateX(-15%); */
 }
 #left {
     position: absolute;
@@ -313,7 +309,6 @@ a, a:active, a:hover, a:focus {
 }
 .top-bar .logo{
     display: none;
-    left: 60px;
     color: #000;
 }
 .top-bar .logo .logo-main {
@@ -389,6 +384,7 @@ a, a:active, a:hover, a:focus {
 @media (max-width: 1000px) {
     .top-bar {
         padding: 0px 10px;
+        position: relative;
     }
     #search {
         padding: 0 20px;
@@ -400,6 +396,7 @@ a, a:active, a:hover, a:focus {
 @media (max-width: 1100px) {
     .top-bar {
         padding: 0px 10px;
+        position: relative;
     }
     #search {
         padding: 0 10px;
@@ -408,14 +405,12 @@ a, a:active, a:hover, a:focus {
         left: 15px;
     }
 }
-@media (max-width: 900px) {
+@media (max-width: 968px) {
     .top-bar {
         padding: 0px 10px;
+        position: relative;
     }
-    .navbar {
-        display: none;
-    }
-    .line {
+    /* .line {
         display: flex;
         width: 35px;
         height: 2.5px;
@@ -424,13 +419,73 @@ a, a:active, a:hover, a:focus {
     }
     .line2 {
         width: 25px;
+    } */
+    .line1 .iconify{
+        font-size: 35px;
+        color: #003030;
+        /* width: 32px;
+        height: 3px;
+        background: #f4f4f4;
+        margin: 7px; */
     }
     .hamburger {
         display: block;
         cursor: pointer;
-        z-index: 100;
+        z-index: -1;
         overflow: hidden;
     }
+    .navbar {
+        height: 100%;
+        width: 100vw;
+        position: absolute;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        transition: ease-in 1000ms;
+
+        z-index: -1;
+    }
+    .navbar.open {
+        height: 50vh;
+        width: 100vw;
+        pointer-events: all;
+        transition: all 0.4s ease;
+        background-color: #888888;
+        z-index: 111;
+    }
+    .navbar li {
+        opacity: 0;
+        overflow: hidden;
+        align-self: center;
+        transition: ease 0.4s;
+    }
+    .navbar li a{
+        font-size: 16px;
+        color: #fff;
+        font-weight: normal;
+        overflow: hidden;
+    }
+    .navbar li:nth-child(1){
+        margin-top: 50px;
+        transition: all 0.2s ease 0.2s;
+    }
+    .navbar li:nth-child(2){
+        transition: all 0.2s ease 0.2s;
+    }
+    li.fade {
+        opacity: 3;
+    }
+    .navbar li :nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .navbar li :nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .toggle .line1{
+        transform: rotate(-45deg) translate(-5px,0px);
+    
+    }
+    
 
 }
 
@@ -617,17 +672,17 @@ a, a:active, a:hover, a:focus {
     z-index: -111;
 }
 .about-ifitfly {
-    width: 70vw;
+    width: 600px;
     align-items: center;
     margin: auto;
+    text-align: center;
 }
 .about-ifitfly h2 {
-    text-align: left;
+
     font-size: 24px;
 }
 .about-ifitfly p {
     padding: 0;
-    text-align: left;
     font-size: 14px;
 }
 /* .ifitfly-policy h2 {
@@ -637,30 +692,39 @@ a, a:active, a:hover, a:focus {
     font-size: 18px;
 }
 .why-ifitfly, .ifitfly-policy  p {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
-    padding: 20px 20px;
+    padding: 20px 10px;
     border-radius: 5px;
 }
 .about-div {
     display: flex;
     justify-content: space-around;
+    gap: 20px;
 }
  .why-ifitfly, .ifitfly-policy {
-    width: 400px;
-    max-width: 100%;
+    width: 500px;
     margin-top: 20px;
     border: 1.8px solid #181818;
     position: relative;
     padding: 40px 20px;
 }
+@media (max-width: 100px) {
+    .why-ifitfly, .ifitfly-policy {
+        width: 200px;
+    }
+}
 
-@media (max-width: 768px) {
+@media (max-width: 708px) {
 
     .about-div {
         flex-direction: column;
     }
     .about-ifitfly {
+        width: 100%;
+        text-align: left;
+    }
+    .why-ifitfly, .ifitfly-policy {
         width: 100%;
     }
 }

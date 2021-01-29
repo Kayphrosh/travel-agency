@@ -53,7 +53,7 @@ function update1() {
 })
 const actives = document.querySelectorAll('.active-step')
 
-progress.style.width = (actives.length - 1) / (circles.length - 1) * 100 + '%'
+progress.style.width = (actives.length - 1) / (circles.length - 20) * 100 + '%'
 }
 
 function resetInterval(){
@@ -99,7 +99,7 @@ function update() {
     })
     const actives = document.querySelectorAll('.active-step')
 
-    progress.style.width = (actives.length - 1) / (circles.length - 1) * 100 + '%'
+    progress.style.width = (actives.length - 1) / (circles.length - 40) * 100 + '%'
 }
 
 
@@ -117,12 +117,11 @@ function changeExploreDiv() {
         idx = exploreDiv - 1
     }
     if(x.matches){
-        exploreT.style.transform = `translateX(${-idx * 320}px)`
+        exploreT.style.transform = `translateX(${-idx * 320 - 12 }px)`
     }
     else {
-        exploreT.style.transform = `translateX(${-idx * 260}px)`
+        exploreT.style.transform = `translateX(${-idx * 260 - 15}px)`
     }
-    
 }
 
 exploreLeft.addEventListener('click', () => {
@@ -140,17 +139,35 @@ exploreRight.addEventListener('click', () => {
 
 const topBar = document.querySelector('.top-bar')
 const topBarLogo = document.querySelector('.top-bar .logo')
+const lines = document.querySelector(".line .iconify")
+const userImage = document.querySelector(".user-img img")
 window.addEventListener('scroll', fixBar) 
-
-console.log(topBarLogo);
 
 function fixBar() {
     if(window.scrollY > topBar.offsetHeight + 800) {
         topBar.classList.add('current')
         topBarLogo.style.display = 'block'
-
+        topBarLogo.style.left = "50%"
+        topBarLogo.style.transform = "translateX(-50%)"
+        lines.style.color = "#fff"
+        userImage.style.width = "40px"
+        userImage.style.height = "40px"
     } else {
         topBar.classList.remove('current')
         topBarLogo.style.display = 'none'
+        lines.style.color = "#003030"
     }
 }
+
+const hamburger = document.querySelector(".hamburger"); 
+const navLinks =  document.querySelector(".navbar");
+const links = document.querySelectorAll(".navbar li");
+
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+    links.forEach(link =>  {
+        link.classList.toggle("fade");
+        hamburger.classList.toggle('toggle');
+    });    
+});
