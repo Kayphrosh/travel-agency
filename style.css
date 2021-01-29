@@ -709,12 +709,6 @@ a, a:active, a:hover, a:focus {
     position: relative;
     padding: 40px 20px;
 }
-@media (max-width: 100px) {
-    .why-ifitfly, .ifitfly-policy {
-        width: 200px;
-    }
-}
-
 @media (max-width: 708px) {
 
     .about-div {
