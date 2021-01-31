@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@400;800&family=PT+Sans:wght@400;700&family=Poppins&family=Redressed&family=Roboto:wght@400;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 * {
     margin: 0px;
     padding: 0px;
@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 16px;
     color: #000000;
     background-color:#ffffff;
@@ -74,7 +74,7 @@ a, a:active, a:hover, a:focus {
 .slider-container {
     box-shadow: 0 0px 5px rgba(0, 0, 0, 0.56), 0 0px 5px rgba(0, 0, 0, 0.53);
     height: 100vh;
-    width: 66vw;
+    width: 62vw;
     border-radius: 0;
     border-top-right-radius: 60px;
     border-bottom-right-radius: 60px;
@@ -84,8 +84,8 @@ a, a:active, a:hover, a:focus {
 .slide{
     opacity: 0;
     height: 100%;
-    width: 66vw;
-    background-color: rgba(58, 58, 58, 0.7);
+    width: 62vw;
+    background-color: rgba(58, 58, 58, 0.6);
     background-blend-mode: multiply;
     background-position: center center;
     background-repeat: no-repeat;
@@ -235,7 +235,7 @@ a, a:active, a:hover, a:focus {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 34vw;
+    width: 38vw;
     min-height: 100vh;
     height: 100%;
     overflow: hidden;
@@ -433,6 +433,7 @@ a, a:active, a:hover, a:focus {
         cursor: pointer;
         z-index: -1;
         overflow: hidden;
+        margin-top: 5px;
     }
     .navbar {
         height: 100%;
@@ -494,18 +495,19 @@ a, a:active, a:hover, a:focus {
     flex-direction: column;
     justify-content: left;
     width: 100%;
-    padding: 0px 10px;
-    margin: 20px 0;
+    /* padding: 0px 10px; */
+    margin: 20px -10px;
 }
 .explore h2 {
     font-size: 24px;
 }
 .places {
     height: 360px;
-    border: 1.8px solid #000000;
+    /* border: .8px solid #000000; */
+    box-shadow: 0 0px 5px rgba(153, 153, 153, 0.56), 0 0px 5px rgba(197, 197, 197, 0.53);
     border-radius: 5px;
-    margin-top: 10px;
-    padding: 5px;
+    margin: 5px;
+    padding: 5px 0 0 5px;
     padding-bottom: 0;
     position: relative;
     overflow: hidden;
@@ -530,6 +532,7 @@ a, a:active, a:hover, a:focus {
     width: 1300px;
     height: 280px;
     margin: 15px 10px;
+    padding: 0 5px;
     margin-bottom: 0;
     transform: translateX(0);
     transition: 0.2s ease;
@@ -656,7 +659,7 @@ a, a:active, a:hover, a:focus {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    margin: 20px 0;
+    margin: 40px 0;
     padding: 0 20px;
     width: 100%;
 }
@@ -672,7 +675,7 @@ a, a:active, a:hover, a:focus {
     z-index: -111;
 }
 .about-ifitfly {
-    width: 600px;
+    width: 700px;
     align-items: center;
     margin: auto;
     text-align: center;
@@ -699,13 +702,17 @@ a, a:active, a:hover, a:focus {
 }
 .about-div {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
 }
  .why-ifitfly, .ifitfly-policy {
-    width: 500px;
-    margin-top: 20px;
-    border: 1.8px solid #181818;
+    width: 450px;
+    margin: 12px 0 0 12px;
+    margin-bottom: 40px;
+    /* border: 1px solid #181818; */
+    box-shadow: 0 0px 5px rgba(153, 153, 153, 0.56), 0 0px 5px rgba(197, 197, 197, 0.53);
     position: relative;
     padding: 40px 20px;
 }
@@ -718,7 +725,14 @@ a, a:active, a:hover, a:focus {
         width: 100%;
         text-align: left;
     }
+    .about-div {
+        align-items: center;
+        align-self: center;
+        margin-top: 0;
+    }
     .why-ifitfly, .ifitfly-policy {
+        align-items: center;
+        align-self: center;
         width: 100%;
     }
 }
