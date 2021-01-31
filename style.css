@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@400;800&family=PT+Sans:wght@400;700&family=Poppins&family=Redressed&family=Roboto:wght@400;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 * {
     margin: 0px;
     padding: 0px;
@@ -242,6 +243,9 @@ a, a:active, a:hover, a:focus {
     padding: 0px 10px;
 }
 @media (max-width: 700px) {
+    #idk {
+        display: block;
+    }
     .showcase {
         flex-direction: column;
         height: 100%;
@@ -304,7 +308,7 @@ a, a:active, a:hover, a:focus {
     width: 100%;
     min-height: 30px;
     padding: 0px 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     overflow: hidden;
 }
 .top-bar .logo{
@@ -352,6 +356,7 @@ a, a:active, a:hover, a:focus {
     align-self: center;
 }
 #search {
+    font-family: 'Roboto Condensed', sans-serif;
     width: 100%;
     padding: 0 5px;
     padding-bottom: 0;
@@ -361,19 +366,26 @@ a, a:active, a:hover, a:focus {
 }
 #search input {
     width: 100%;
-    padding: 10px 10px;
+    margin: 5px 0;
+    padding: 12px 10px;
     padding-left: 35px;
-    border: 1.8px solid #181818;
-    border-radius: 5px;
+    border: none;
     outline: none;
+    box-shadow: 0 0px 5px rgba(153, 153, 153, 0.56), 0 0px 5px rgba(197, 197, 197, 0.53);    border-radius: 5px;
+    outline: none;
+    transition: 0.4s ease;
 }
-#search input:focus {
-    border: 2px solid #003030;
+#search input::placeholder {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#search input:focus, #search input:hover {
+    box-shadow: 0 0px 5px rgb(0, 26, 21), 0 0px 0px rgba(9, 38, 0, 0.53);    border-radius: 5px;
+    transition: 0.4s ease-in;
 }
 #search .iconify {
     position: absolute;
     font-size: 26px;
-    top: 5px;
+    top: 10px;
     left: 15px;
     transform: translateX(30px);
 }
@@ -405,10 +417,13 @@ a, a:active, a:hover, a:focus {
         left: 15px;
     }
 }
-@media (max-width: 900px) {
+@media (max-width: 760px) {
     .top-bar {
         padding: 0px 10px;
         position: relative;
+    }
+    #idk {
+        display: block;
     }
     /* .line {
         display: flex;
@@ -491,16 +506,17 @@ a, a:active, a:hover, a:focus {
 }
 
 .explore {
+    font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: left;
     width: 100%;
-    /* padding: 0px 10px; */
-    margin: 20px -10px;
+    margin: 10px -10px;
+    margin-top: 5px;
 }
 .explore h2 {
     margin-left: 5px;
-    font-size: 24px;
+    font-size: 20px;
 }
 .places {
     height: 360px;
@@ -612,12 +628,9 @@ a, a:active, a:hover, a:focus {
         width: 310px;
         height: 320px;
     }
-    #idk {
-        display: flex;
-        align-items: center;
-    }
 }
 .offer {
+    font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -626,7 +639,7 @@ a, a:active, a:hover, a:focus {
     padding: 0px 10px;
 }
 .offer h2 {
-    font-size: 24px;
+    font-size: 20px;
     align-self: flex-start;
 }
 .offers {
@@ -638,18 +651,25 @@ a, a:active, a:hover, a:focus {
 }
 .offers #services {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    box-shadow: 0 0px 5px rgba(153, 153, 153, 0.56), 0 0px 5px rgba(197, 197, 197, 0.53);
     align-items: center;
     text-align: center;
+    padding: 3px 20px;
+    margin: 5px;
+    border-radius: 5px;
 }
 #services .iconify {
-    font-size: 30px;
-    color: #003030;
+    font-size: 20px;
 }
 #services p {
     font-size: 14px;
     font-weight: 500;
-    color: #003030;
+}
+#services:hover {
+    background-color: #003030;
+    color: #fff;
+    transition: .4s ease-in-out;
 }
 @media (max-width: 1000px) {
     .explore {
@@ -661,16 +681,13 @@ a, a:active, a:hover, a:focus {
 }
 
 .about {
+    font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    margin: 40px 0;
     padding: 0 20px;
+    margin-top: 30px;
     width: 100%;
-}
-.about h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
 }
 .about h1 {
     font-size: 90px;
@@ -686,29 +703,31 @@ a, a:active, a:hover, a:focus {
     text-align: center;
 }
 .about-ifitfly h2 {
-
-    font-size: 24px;
+    font-size: 20px;margin-bottom: 5px;
 }
 .about-ifitfly p {
+    color: #444444;
     padding: 0;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 300;
+    padding-left: 10px;
 }
-/* .ifitfly-policy h2 {
-    text-align: right;
-} */
 .about-div  h2 {
     font-size: 18px;
 }
-.why-ifitfly, .ifitfly-policy  p {
-    font-size: 14px;
-    font-weight: 500;
-    padding: 20px 10px;
+.why-ifitfly p, .ifitfly-policy  p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #444444;
+    padding: 10px 10px;
     border-radius: 5px;
 }
 .about-div {
     display: flex;
     justify-content: center;
     align-items: center;
+    align-self: center;
+    margin: auto;
     margin-top: 20px;
     padding: 10px;
 }
@@ -717,10 +736,13 @@ a, a:active, a:hover, a:focus {
     margin: 12px 0 20px 12px;
     box-shadow: 0 0px 5px rgba(153, 153, 153, 0.56), 0 0px 5px rgba(197, 197, 197, 0.53);
     position: relative;
-    padding: 40px 20px;
+    padding: 40px 10px;
+    border-radius: 5px;
 }
 @media (max-width: 708px) {
-
+    .about {
+        margin-top: 0;
+    }
     .about-div {
         flex-direction: column;
     }
@@ -738,4 +760,16 @@ a, a:active, a:hover, a:focus {
         align-self: center;
         width: 100%;
     }
+}
+
+
+
+@media (max-width: 700px) { 
+    .explore {
+        margin-top: 20px;
+    }
+    .offer {
+        margin-top: 20px;
+    }
+
 }
