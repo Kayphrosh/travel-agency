@@ -87,7 +87,7 @@ a, a:active, a:hover, a:focus {
     opacity: 0;
     height: 100%;
     width: 62vw;
-    background-color: rgba(58, 58, 58, 0.6);
+    background-color: rgba(109, 109, 109, 0.6);
     background-blend-mode: multiply;
     background-position: center center;
     background-repeat: no-repeat;
@@ -537,7 +537,7 @@ a, a:active, a:hover, a:focus {
     height: 25px;
 }
 .places-nav li a{
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     color: #000000;
 }
@@ -734,7 +734,6 @@ a, a:active, a:hover, a:focus {
 }
 .about-ifitfly p {
     color: #575757;
-    padding: 0;
     font-size: 15px;
     font-weight: 500;
 }
@@ -778,6 +777,9 @@ a, a:active, a:hover, a:focus {
 @media (max-width: 708px) {
     .about {
         margin-top: 0;
+    }
+    .about-ifitfly p {
+        padding-left: 10px;
     }
     .about-div {
         flex-direction: column;
