@@ -631,13 +631,13 @@ a, a:active, a:hover, a:focus {
     }
 }
 .offer {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     width: 100%;
-    padding: 0px 10px;
+    padding: 0px 5px;
 }
 .offer h2 {
     font-size: 20px;
@@ -648,6 +648,7 @@ a, a:active, a:hover, a:focus {
     justify-content: space-between;
     width: 100%;
     align-items: center;
+    margin: 5px 0 0px 5px;
     margin-top: 10px;
 }
 .offers #services {
@@ -680,9 +681,14 @@ a, a:active, a:hover, a:focus {
         padding: 0 10px;
     }
 }
+@media (max-width: 400px) {
+    .offers {
+        flex-wrap: wrap;
+    }
+}
 
 .about {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -694,47 +700,62 @@ a, a:active, a:hover, a:focus {
 }
 .about-img {
     position: absolute;
+    top: 0;
+    left: 15%;
+    transform: translateX(-15%);
     z-index: -1221;
 }
 .about-img img{
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 250px;
     object-fit: cover;
     object-position: center center;
+    border-radius: 5px;
 }
 
 .about h1 {
     font-size: 90px;
-    color: #bfbfbf6d;
+    color: #c9c9c96d;
     position: absolute;
     top: 0;
     z-index: -111;
 }
 .about-ifitfly {
-    width: 700px;
-    align-items: center;
-    margin: auto;
+    width: 600px;
+    align-items: flex-end;
+    align-content: right;
+    align-self: flex-end;
     text-align: left;
 }
 .about-ifitfly h2 {
+    font-weight: 900;
     font-size: 20px;
     margin-bottom: 5px;
 }
 .about-ifitfly p {
-    color: #6f6f6f;
+    color: #575757;
     padding: 0;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 500;
 }
 .about-div  h2 {
+    font-weight: 900;
     font-size: 18px;
 }
 .why-ifitfly p, .ifitfly-policy  p {
     font-size: 14.5px;
-    font-weight: 300;
-    color: #6f6f6f;
+    font-weight: 500;
+    color: #575757;
     padding: 10px 10px;
+    padding-right: 0;
     border-radius: 5px;
+}
+.why-ifitfly p {
+    text-align: right;
+    padding-left: 0;
+}
+.ifitfly-policy  p {
+    text-align: left;
 }
 .about-div {
     display: flex;
@@ -744,6 +765,7 @@ a, a:active, a:hover, a:focus {
     margin: auto;
     margin-top: 20px;
     padding: 10px;
+    width: 100%;
 }
  .why-ifitfly, .ifitfly-policy {
     width: 450px;
@@ -775,8 +797,6 @@ a, a:active, a:hover, a:focus {
         width: 100%;
     }
 }
-
-
 
 @media (max-width: 700px) { 
     .explore {
