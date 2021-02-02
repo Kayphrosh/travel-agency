@@ -315,11 +315,11 @@ a, a:active, a:hover, a:focus {
 }
 .top-bar .logo{
     display: none;
-    color: #000;
+    color: #a0a0a0;
 }
 .top-bar .logo .logo-main {
     top: -35px;
-    color: #000;
+    color: #e73232;
 }
 .top-bar.current {
     display: none;
