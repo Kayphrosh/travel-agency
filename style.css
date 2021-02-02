@@ -701,21 +701,21 @@ a, a:active, a:hover, a:focus {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 20px;
-    padding-top: 40px;
+    padding: 40px 20px;
     margin-top: 50px;
     width: 100%;
-    min-height: 100vh;
     position: relative;
     background-image: url(./images/ab.jpg);
-    background-color: rgba(1, 41, 29, 0.741);
+    background-color: rgba(1, 41, 29, 0.8);
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    color: #f4f4f4;
+    color: #fff;
     border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
+    border-top-left-radius: 500px;
+    /* border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px; */
 }
 .about-img {
     position: absolute;
@@ -731,14 +731,6 @@ a, a:active, a:hover, a:focus {
     object-position: center center;
     border-radius: 5px;
 }
-
-.about h1 {
-    font-size: 90px;
-    color: #c9c9c96d;
-    position: absolute;
-    top: 0;
-    z-index: -111;
-}
 .about-ifitfly {
     width: 600px;
     align-items: center;
@@ -747,23 +739,21 @@ a, a:active, a:hover, a:focus {
     text-align: left;
 }
 .about-ifitfly h2 {
-    font-weight: 800;
-    font-size: 20px;
+    font-weight: bolder;
+    font-size: 22px;
     margin-bottom: 5px;
 }
 .about-ifitfly p {
-    color: #f4f4f4;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
 }
 .about-div  h2 {
     font-weight: 800;
-    font-size: 18px;
+    font-size: 20px;
 }
 .why-ifitfly p, .ifitfly-policy  p {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
-    color: #f4f4f4;
     padding: 10px 10px;
     padding-right: 0;
     border-radius: 5px;
@@ -803,9 +793,16 @@ a, a:active, a:hover, a:focus {
 @media (max-width: 708px) {
     .about {
         margin-top: 20px;
+        padding-top: 170px;
+        border-top-left-radius: 400px;
     }
-    /* .about-ifitfly p {
-    } */
+    .about-ifitfly h2 {
+        text-align: end;
+    }
+    .about-ifitfly p {
+        padding-left: 10px;
+        text-align: end;
+    }
     .about-div {
         flex-direction: column;
     }
