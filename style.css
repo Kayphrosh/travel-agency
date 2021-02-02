@@ -72,7 +72,7 @@ a, a:active, a:hover, a:focus {
     font-size: 3.7rem;
 }
 .logo-id-smail{
-    font-size: 26px;
+    font-size: 32px;
 }
 .slider-container {
     box-shadow: 0 0px 5px rgba(0, 0, 0, 0.56), 0 0px 5px rgba(0, 0, 0, 0.53);
@@ -308,7 +308,7 @@ a, a:active, a:hover, a:focus {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    min-height: 30px;
+    min-height: 50px;
     padding: 0px 5px;
     margin-bottom: 5px;
     overflow: hidden;
@@ -318,7 +318,7 @@ a, a:active, a:hover, a:focus {
     color: #a0a0a0;
 }
 .top-bar .logo .logo-main {
-    top: -35px;
+    top: -30px;
     color: #e73232;
 }
 .top-bar.current {
@@ -712,7 +712,7 @@ a, a:active, a:hover, a:focus {
     background-position: center center;
     background-size: cover;
     color: #fff;
-    border-top-right-radius: 50px;
+    border-top-right-radius: 65px;
     border-top-left-radius: 500px;
     /* border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px; */
@@ -793,7 +793,7 @@ a, a:active, a:hover, a:focus {
 @media (max-width: 708px) {
     .about {
         margin-top: 20px;
-        padding-top: 170px;
+        padding-top: 200px;
         border-top-left-radius: 400px;
     }
     .about-ifitfly h2 {

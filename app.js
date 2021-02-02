@@ -148,6 +148,7 @@ function fixBar() {
         topBar.classList.add('current')
         topBarLogo.style.display = 'block'
         topBarLogo.style.left = "50%"
+        topBarLogo.style.top = '2px'
         topBarLogo.style.transform = "translateX(-50%)"
         lines.style.color = "#000"
         userImage.style.width = "40px"
