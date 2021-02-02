@@ -151,8 +151,8 @@ function fixBar() {
         topBarLogo.style.top = '2px'
         topBarLogo.style.transform = "translateX(-50%)"
         lines.style.color = "#000"
-        userImage.style.width = "40px"
-        userImage.style.height = "40px"
+        userImage.style.width = "45px"
+        userImage.style.height = "45px"
     } else {
         topBar.classList.remove('current')
         topBarLogo.style.display = 'none'

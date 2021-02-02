@@ -308,7 +308,7 @@ a, a:active, a:hover, a:focus {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    min-height: 50px;
+    min-height: 30px;
     padding: 0px 5px;
     margin-bottom: 5px;
     overflow: hidden;
@@ -433,6 +433,7 @@ a, a:active, a:hover, a:focus {
         z-index: 111;
         margin-bottom: 0;
         transition: 0.2s ease;
+        height: 55px;
     }
     /* .line {
         display: flex;
@@ -545,12 +546,12 @@ a, a:active, a:hover, a:focus {
     height: 25px;
 }
 .places-nav li a{
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     color: #000000;
 }
 .places-nav a.active-li {
-    border-bottom: 2.5px solid #008c8c;
+    border-bottom: 2px solid #008c8c;
 }
 .dubai-x {
     display: flex;
@@ -784,6 +785,10 @@ a, a:active, a:hover, a:focus {
     padding: 40px 10px;
     border-radius: 5px;
 }
+.why-ifitfly:hover, .ifitfly-policy:hover {
+    box-shadow: 0 0px 10px rgba(153, 153, 153, 0.56), 0 0px 10px rgba(197, 197, 197, 0.53);
+    transform: scale(0.98);
+}
 .why-ifitfly .iconify {
     position: absolute;
     /* bottom: 0px; */
@@ -953,5 +958,91 @@ a, a:active, a:hover, a:focus {
     }
     .package {
         min-width: 100%;
+    }
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./images/footer.png);
+    background-color: rgba(0, 0, 0, 0.95);
+    background-blend-mode: multiply;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 20px 0;
+    color: #fff;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 60px;
+}
+.fast-links {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    margin: auto;
+    min-width: 450px;
+    min-height: 100%;
+    padding: 10px 35px;
+}
+.links-div {
+    min-width: 100px;
+}
+.links-div h2{
+    margin-bottom: 20px;
+    font-size: 16px;
+
+}
+.links-div ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 140px;
+}
+.links-div li {
+    align-items: center;
+    height: 100%;
+}
+.links-div ul a {
+    font-size: 14px;
+    color: #fff;
+    padding-bottom: 3px;
+}
+.links-div ul a:hover {
+    border-bottom: 3px solid #003030;
+    transition: 0.2s ease-in;
+}
+.footer-logo .logo {
+    display: block;
+}
+.footer-sm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 150px;
+    margin: 20px 0;
+    margin-top: 0;
+    align-items: center;
+}
+.footer-sm .iconify {
+    font-size: 30px;
+}
+.all-rights {
+    margin: auto;
+    font-size: 12px;
+}
+@media (max-width: 350px) {
+    .fast-links {
+        justify-content: center;
+        justify-self: center;
+        margin: auto;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 10px 20px;
     }
 }
