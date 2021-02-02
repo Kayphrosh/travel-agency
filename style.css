@@ -698,22 +698,24 @@ a, a:active, a:hover, a:focus {
 .about {
     font-family: 'Noto Sans JP', sans-serif;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     padding: 0 20px;
     padding-top: 40px;
     margin-top: 50px;
     width: 100%;
+    min-height: 100vh;
     position: relative;
     background-image: url(./images/ab.jpg);
-    background-color: rgba(0, 0, 0, 0.829);
+    background-color: rgba(1, 41, 29, 0.741);
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    color: #fff;
-    border-top-right-radius: 40px;
-    border-top-left-radius: 40px;
+    color: #f4f4f4;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
 }
 .about-img {
     position: absolute;
@@ -739,9 +741,9 @@ a, a:active, a:hover, a:focus {
 }
 .about-ifitfly {
     width: 600px;
-    align-items: flex-end;
-    align-content: right;
-    align-self: flex-end;
+    align-items: center;
+    align-content: center;
+    align-self: center;
     text-align: left;
 }
 .about-ifitfly h2 {
@@ -750,21 +752,22 @@ a, a:active, a:hover, a:focus {
     margin-bottom: 5px;
 }
 .about-ifitfly p {
-    /* color: #575757; */
-    font-size: 14px;
-    font-weight: 500;
+    color: #f4f4f4;
+    font-size: 15px;
+    font-weight: 400;
 }
 .about-div  h2 {
     font-weight: 800;
     font-size: 18px;
 }
 .why-ifitfly p, .ifitfly-policy  p {
-    font-size: 14px;
-    font-weight: 500;
-    /* color: #575757; */
+    font-size: 15px;
+    font-weight: 400;
+    color: #f4f4f4;
     padding: 10px 10px;
     padding-right: 0;
     border-radius: 5px;
+    z-index: 111;
 }
 .why-ifitfly p {
     text-align: right;
@@ -785,19 +788,24 @@ a, a:active, a:hover, a:focus {
 }
  .why-ifitfly, .ifitfly-policy {
     width: 450px;
-    margin: 12px 0 20px 12px;
+    margin: 20px 0 0px 40px;
     box-shadow: 0 0px 5px rgba(153, 153, 153, 0.56), 0 0px 5px rgba(197, 197, 197, 0.53);
     position: relative;
     padding: 40px 10px;
     border-radius: 5px;
 }
+.why-ifitfly .iconify {
+    position: absolute;
+    /* bottom: 0px; */
+    font-size: 70px;
+    color: #f0f0f0;
+}
 @media (max-width: 708px) {
     .about {
         margin-top: 20px;
     }
-    .about-ifitfly p {
-        padding-left: 10px;
-    }
+    /* .about-ifitfly p {
+    } */
     .about-div {
         flex-direction: column;
     }
@@ -814,6 +822,7 @@ a, a:active, a:hover, a:focus {
         align-items: center;
         align-self: center;
         width: 100%;
+        margin: 20px 0px 0px 10px;
     }
 }
 
