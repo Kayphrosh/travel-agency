@@ -149,7 +149,7 @@ function fixBar() {
         topBarLogo.style.display = 'block'
         topBarLogo.style.left = "50%"
         topBarLogo.style.transform = "translateX(-50%)"
-        lines.style.color = "#fff"
+        lines.style.color = "#000"
         userImage.style.width = "40px"
         userImage.style.height = "40px"
     } else {
