@@ -975,7 +975,7 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    padding: 20px 0;
+    padding: 40px 0;
     color: #fff;
     border-top-right-radius: 60px;
     border-top-left-radius: 60px;
@@ -985,8 +985,11 @@ footer {
     display: flex;
     justify-content: space-between;
     align-self: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
     margin: auto;
-    min-width: 450px;
+    min-width: 750px;
     min-height: 100%;
     padding: 10px 35px;
 }
@@ -1009,7 +1012,7 @@ footer {
     height: 100%;
 }
 .links-div ul a {
-    font-size: 14px;
+    font-size: 12px;
     color: #fff;
     padding-bottom: 3px;
 }
@@ -1024,17 +1027,40 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 150px;
+    width: 160px;
     margin: 20px 0;
     margin-top: 0;
     align-items: center;
 }
 .footer-sm .iconify {
-    font-size: 30px;
+    font-size: 24px;
+    background-color: #fff;
+    width: 30px;
+    padding: 3px 5px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    color: #003030;
+    box-shadow: 0 0px 2px rgba(153, 153, 153, 0.56), 0 0px 3px rgba(197, 197, 197, 0.53);
+}
+.footer-sm .iconify:hover {
+    background-color: transparent;
+    color: #fff;
+    transform: scale(0.95);
 }
 .all-rights {
     margin: auto;
     font-size: 12px;
+}
+@media (max-width: 950px) {
+    .fast-links {
+        min-width: 600px;
+    }
+}
+@media (max-width: 750px) {
+    .fast-links {
+        min-width: 100%;
+        padding: 10px 10px;
+    }
 }
 @media (max-width: 350px) {
     .fast-links {
@@ -1045,4 +1071,37 @@ footer {
         flex-wrap: wrap;
         padding: 10px 20px;
     }
+}
+
+.connect {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 400px;
+    width: 100%;
+    background: url(./images/connect.gif);
+    background-position: center center;
+    background-size: cover;
+    transition: 0.2s ease-in;
+    position: relative;
+}
+.connect div {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    margin: auto;
+    height: 100%;
+}
+.connect h1 {
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    margin: auto;
+    height: 400px;
+    width: 100%;
+    font-weight: bolder;
+    font-size: 3rem;
+    transition: 1s ease-in;
 }
